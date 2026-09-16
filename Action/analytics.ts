@@ -1,0 +1,17 @@
+"use server"
+
+import { api } from "./api";
+
+export type Analytics = {
+  title: string,
+  count: number  
+}
+export async function getAllAnalytics(schoolId: string) {
+   try {
+     const response = await api.get(`/analytics/school/${schoolId}`);
+     const analytics = response.data
+     return analytics as Analytics[];
+   } catch (error) {
+     console.log(error)
+   }
+}
