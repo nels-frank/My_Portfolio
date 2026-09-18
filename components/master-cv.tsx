@@ -28,27 +28,31 @@ export function MasterCv() {
     />
   </div>
 
-  <div className="flex flex-col gap-2 pt-3 sm:flex-row sm:justify-end">
-    <Button variant="outline">
-      <a
-        href="/documents/Adzua_Terhemen_Frank_Master_CV.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open full PDF
-      </a>
-    </Button>
+  <DialogContent className="w-[95vw] max-w-4xl max-h-[90vh] overflow-y-auto">
+  <div className="h-[75vh] w-full overflow-auto rounded-md">
+    <iframe
+      src="/documents/Adzua_Terhemen_Frank_Master_CV.pdf#page=1"
+      className="h-full w-full"
+      title="Adzua Terhemen Frank Master CV"
+    />
+  </div>
 
-    <Button className="bg-blue-600 hover:bg-blue-700">
-      <a
-        href="/documents/Adzua_Terhemen_Frank_Master_CV.pdf"
-        download="Adzua_Terhemen_Frank_Master_CV.pdf"
-      >
+  <div className="flex justify-end gap-3 pt-3">
+    <Button variant="outline" size="lg" className="h-11 px-5">
+      <a href="/documents/Adzua_Terhemen_Frank_Master_CV.pdf" target="_blank" rel="noopener noreferrer">
+        <ExternalLink className="mr-2 h-4 w-4" />
+        Open PDF
+      </a>
+    </Button> 
+
+    <Button size="lg" className="h-11 bg-blue-600 px-5 hover:bg-blue-700">
+      <a href="/documents/Adzua_Terhemen_Frank_Master_CV.pdf" download="Adzua_Terhemen_Frank_Master_CV.pdf">
         <Download className="mr-2 h-4 w-4" />
         Download CV
       </a>
     </Button>
   </div>
+</DialogContent>
 </DialogContent>
     </Dialog>
   )
